@@ -1,0 +1,25 @@
+<!--pages/Hotel/Hotel.wxml-->
+<view class="body">
+  <view class='item' bindtap="foodPage">
+    <image src='../index1.jpg'></image>
+    <view>
+      <view class='title'>谷香谷色农家</view>
+      <view class='address'>地址：桃源洞村管理局斜对面</view>
+      <view class='desc'>很好吃的一家店很好吃的一家店很好吃的一家店很好吃的一家店</view>
+    </view>
+  </view>
+  <view class='item'>
+    <image src='../h2.jpg'></image>
+    <view class='title'>谷香谷色农家</view>
+    <view class='address'>地址：桃源洞村管理局斜对面</view>
+    <view class='desc'>很好吃的一家店很好吃的一家店很好吃的一家店很好吃的一家店</view>
+  </view>
+  <view class='item'>
+    <image src='../h2.jpg'></image>
+    <view class='item-text'>
+      <view class='title'>谷香谷色农家</view>
+      <view class='address'>地址：桃源洞村管理局斜对面</view>
+      <view class='desc'>很好吃的一家店很好吃的一家店很好吃的一家店很好吃的一家店</view>
+    </view>
+  </view>
+</view>

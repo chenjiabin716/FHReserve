@@ -1,0 +1,117 @@
+/* pages/Guest/Guest.wxss */
+
+.body {
+  width: 100%;
+  height: 700px;
+  background-color: #e8e8e8;
+}
+
+.head {
+  background-color: #fff;
+  margin-bottom: 12px;
+  padding-left: 15px;
+  padding-bottom:10px;
+}
+.title{
+  color:#EBA444;
+}
+
+.head image {
+  width: 100%;
+  height: 200px;
+}
+
+.list {
+  background-color: #fff;
+  padding: 10px 0px;
+}
+
+.item {
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  padding-left: 15px;
+}
+
+.item text {
+  float: left;
+}
+
+.name {
+  width: 60%;
+}
+
+.money {
+  width: 20%;
+}
+
+.count {
+  width: 20%;
+}
+
+.info {
+  background-color: #fff;
+  margin-top: 12px;
+  padding:10px 0px;
+}
+.infoitem{
+  padding:5px 15px;
+  font-size:16px;
+}
+.infoitem_right {
+  float: right;
+}
+
+.remark {
+  background-color: #fff;
+  margin-top: 12px;
+  padding:15px;
+  height:70px;
+  font-size:16px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  z-index: 9999;
+}
+
+.footer image {
+  width: 40px;
+  height: 40px;
+  padding: 6px 0px 0px 5px;
+  position: absolute;
+  bottom: 2px;
+  z-index: 2;
+}
+
+.money1 {
+  font-size: 16px;
+  float: left;
+  padding-left: 15px;
+  line-height: 50px;
+}
+
+.subbtn {
+  width: 35%;
+  height: 50px;
+  background-color: #0094ff;
+  float: right;
+  font-size: 16px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+}
+
+.moneyico {
+  font-size: 12px;
+  color: #000;
+}
+
+.dianhua{
+position: absolute;
+
+}

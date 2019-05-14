@@ -1,0 +1,71 @@
+<!--pages/Food/Food.wxml-->
+<scroll-view class="body" bindscroll="touchmove" scroll-y="true">
+  <!--<view bindtap='shuaxin' style="height:50px;margin:15px;line-height:50px;">刷新</view>-->
+  <view class='item'>
+    <image class="topimg" src='../index1.jpg'></image>
+    <view>
+      <view class='title' style='color:{{textColor1}}'>谷香谷色农家</view>
+      <view class='address'>
+        <text style="line-height:32px;font-size:12px">地址：神农谷游客服务中心大门停车场旁</text>
+        <view class='dianhua' bindtap="makePhone">
+          <image src="../phone.png" style="width:25px;height:25px;"></image>
+          <view style='font-size:12px;color:#0094ff;'>电话</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--菜品类型-->
+  <view class="typelist" style="{{foodtypecss}}">
+    <view wx:for="{{typelist}}">
+      <view bindtap='selfoodtype' data-id="{{item.FoodTypeID}}" class="{{selType==item.FoodTypeID||(!selType&&index==0)?'active':'mrbackcolor'}}">{{item.FoodTypeName}}</view>
+    </view>
+  </view>
+  <!--菜品列表-->
+  <scroll-view class="foodlist" scroll-y="{{scroll}}" bindscroll="bindscroll" bindscrolltoupper="bindscrolltoupper" scroll-into-view="{{scrollid}}" scroll-with-animation="true" >
+    <view wx:for="{{list}}" wx:key="FoodID"  id="{{'t'+item.FoodType}}">
+      <view class="fooditem">
+        <view wx:if="{{item.IsGood==1}}">
+          <view class='tuijian' style="background-color:{{btnColor1}}">招牌</view>
+        </view>
+        <image src="{{weburl}}{{item.FoodImages}}"></image>
+        <view class="info">
+          <view class="name">
+            {{item.FoodName}}
+          </view>
+          <view class="price" style="color:{{textColor}}">
+            <text class="moneyico">￥</text>{{item.FoodPrice}}
+          </view>
+          <view class="store">
+            剩余{{item.FoodStoreCount}}份
+          </view>
+          <view class="desc">
+            {{item.FoodTypeName+'  :'+item.FoodDesc}}
+          </view>
+          <view class="addbtn" data-index="{{index}}" bindtap='addnum' style='background-color:{{btnColor}}'>
+            <text>+</text>
+          </view>
+          <view class="num">
+            <text>{{item.num?item.num:0}}</text>
+          </view>
+          <view class="jianbtn" data-index="{{index}}" bindtap='jiannum' style="border:1px solid {{btnColor}};color:{{btnColor}}">
+            <text>-</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+
+</scroll-view>
+<!--底部-->
+<view class="footer" style="{{footercss}}">
+  <view class="cart">
+    <view class="count" style="background-color:{{textColor}}">{{totalCount}}</view>
+    <image src="../cart.png"></image>
+  </view>
+  <view class="money">
+    <text class='moneyico'>￥</text>
+    <text style="color:{{textColor}};">{{totalMoney}}</text>
+  </view>
+  <view class="subbtn" bindtap="guestPage" style='background-color:{{btnColor}}'>选好了</view>
+</view>
